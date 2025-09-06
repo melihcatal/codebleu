@@ -73,10 +73,10 @@ def corpus_dataflow_match(references, candidates, lang, tree_sitter_language=Non
                         match_count += 1
                         normalized_cand_dfg.remove(dataflow)
     if total_count == 0:
-        logging.warning(
-            "WARNING: There is no reference data-flows extracted from the whole corpus, "
-            "and the data-flow match score degenerates to 0. Please consider ignoring this score."
-        )
+        #logging.warning(
+        #    "WARNING: There is no reference data-flows extracted from the whole corpus, "
+        #    "and the data-flow match score degenerates to 0. Please consider ignoring this score."
+        #)
         return 0
     score = match_count / total_count
     return score
